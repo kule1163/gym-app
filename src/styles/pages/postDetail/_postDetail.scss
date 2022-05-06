@@ -1,0 +1,28 @@
+.post-detail-container {
+  width: 100%;
+  padding-inline: $layout-padding;
+  .img-box {
+    height: 35vw;
+    overflow: hidden;
+    border-radius: $dual-grid-box-radius;
+    width: 100%;
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .section-container {
+    border-radius: $dual-grid-box-radius;
+    margin-top: 1rem;
+    background-color: white;
+    padding: $layout-padding;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & * {
+      text-align: center !important;
+    }
+  }
+}

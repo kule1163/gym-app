@@ -1,0 +1,21 @@
+.pricing-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: $firstIndigo;
+  @media (max-width: $menu-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $menu-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .first {
+    background-color: $firstIndigo;
+  }
+  .third {
+    background-color: $thirdIndigo;
+  }
+  .orange {
+    background-color: $orange;
+  }
+}

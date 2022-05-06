@@ -1,0 +1,19 @@
+.searchIcon-container {
+    width: 100px;
+    height: 100px;
+    background-color: rgba($color: white, $alpha: .6);
+    border-radius: 50%;
+    .searchIcon-box {
+        cursor: pointer;
+        transition: ease .5s all;
+        width: 70px;
+        height: 70px;
+        color: white !important;
+        background-color: $orange;
+        border-radius: 50%;
+        &:hover {
+            width: 100px;
+             height: 100px;
+        }
+    }
+}

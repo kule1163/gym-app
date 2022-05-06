@@ -1,0 +1,36 @@
+.header-comp-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    .header-comp-box {
+        display: flex;
+        .text {
+            font-size: .8em;
+            font-weight: 900;
+        }
+        .first {
+            color: $firstIndigo;
+            font-size: 1.5em !important;
+            padding-right: .3rem;
+            box-sizing: border-box;
+        }
+
+        .second {
+            color: $orange;
+            font-size: 1.5em !important;
+        }
+    }
+    .hr {
+        width: 40vw;
+        height: 5px;
+        border-radius: 20px;
+        background-color: $orange;
+        @media (max-width: $menu-md) {
+            width: 30vw;
+        }
+        @media (max-width: $menu-md) {
+            width: 20vw;
+        }
+    }
+}

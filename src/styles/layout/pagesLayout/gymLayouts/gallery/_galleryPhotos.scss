@@ -1,0 +1,10 @@
+.gallery-photos-container {
+    background-color: rgba($color: black, $alpha: 0.6);
+    position: absolute;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

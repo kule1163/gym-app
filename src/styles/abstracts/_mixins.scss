@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Rubik:wght@900&display=swap");
+
+@mixin fontFamilyHeader {
+  font-family: "Rubik", sans-serif;
+}
+//width height
+@mixin width-list {
+  @for $i from 0 through 100 {
+    .width-#{$i} {
+      width: $i * 1%;
+    }
+  }
+}
+@include width-list;
+@mixin height-list {
+  @for $i from 0 through 100 {
+    .height-#{$i} {
+      height: $i * 1%;
+    }
+  }
+}
+@include height-list;
+
+//transform
+@mixin transfrom($x, $y) {
+  -moz-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+//placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

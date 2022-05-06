@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Rubik:wght@900&display=swap");
+
+$inline-blank: 2rem;
+$block-blank: 1rem;
+$home-md: 750px;
+$home-sm: 650px;
+
+.home-container {
+  /*  margin-top: $navbar-height; */
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  z-index: 0;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  .header-container {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .font {
+      font-weight: 900;
+      @include fontFamilyHeader;
+      @media (max-width: $home-md) {
+        font-size: 1.1em !important;
+      }
+    }
+    .left-text {
+      color: white;
+    }
+    .right-text {
+      color: $orange;
+    }
+    @media (max-width: $home-md) {
+      & > * {
+        font-size: 3em !important;
+      }
+    }
+  }
+  .sm-hidden {
+    @media (max-width: $home-sm) {
+      display: none !important;
+    }
+  }
+  .box {
+    border: solid 1px black;
+    width: 20px;
+    height: 20px;
+  }
+  .top-text {
+    font-size: 0.7em;
+    color: white;
+    letter-spacing: 6px;
+    .span {
+      color: $orange;
+    }
+  }
+  .left-top {
+    position: absolute;
+    top: $block-blank;
+    left: $inline-blank;
+  }
+  .middle {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: $block-blank;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $thirdIndigo;
+    @include transfrom(-50%, 0);
+    @media (min-width: $menu-md) and (max-width: $menu-lg) {
+      display: flex;
+    }
+  }
+  .right-top {
+    position: absolute;
+    top: $block-blank;
+    right: $inline-blank;
+  }
+  .left-bottom {
+    position: absolute;
+    display: inline-flex;
+    bottom: $block-blank;
+    left: $inline-blank;
+    @media (max-width: $home-sm) {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: none;
+      top: 1rem;
+    }
+  }
+  .right-bottom {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    bottom: $block-blank;
+    right: $inline-blank;
+    @media (max-width: $home-md) {
+      left: 50%;
+      @include transfrom(-50%, 0);
+      width: 100%;
+    }
+    .input {
+      width: 240px;
+      border-radius: 30px;
+      background-color: $thirdIndigo;
+      outline: none;
+      border: none;
+      margin-right: 1rem;
+      color: $menu-item-color;
+      padding-left: 1.2rem;
+      box-sizing: border-box;
+      &:active {
+        outline: none;
+        border: none;
+      }
+      @include placeholder {
+        color: $menu-item-color;
+      }
+      @media (max-width: $home-md) {
+        width: 80vw;
+      }
+    }
+  }
+
+  .icon-container {
+    @extend .orange-icon;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Rubik:wght@900&display=swap");
+html {
+  scroll-padding-top: $navbar-height;
+  scroll-behavior: smooth;
+}
+//color
+.white {
+  color: white !important;
+}
+
+//font-family
+.flex-c-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-r-c-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  display: block;
+}
+
+//layout
+//layouts margin bottom
+.layout-margin-bottom {
+  height: 70px;
+  width: 100%;
+}
+//small layout header
+.layout-small-header {
+  font-size: 0.7em;
+  color: white;
+  letter-spacing: 10px !important;
+}
+
+//orange icon
+.orange-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $orange;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  &:hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $orange-hover-overlay;
+    border-radius: 50%;
+  }
+}
+
+//dual grid
+.dual-grid-header-text {
+  font-size: 2em !important;
+  font-weight: 900 !important;
+  @include fontFamilyHeader;
+  color: $firstIndigo !important;
+}
+
+.dual-grid-header-secondry-text {
+  color: $secondIndigo !important;
+  font-size: 1.1em !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  margin-top: 2rem !important;
+}
+
+.dual-grid-text {
+  font-size: 1em !important;
+  @include fontFamilyHeader;
+  color: $menu-item-color !important;
+}
+
+//select
+.select-general {
+  background-color: $select-color !important;
+  height: $button-height !important;
+  color: black !important;
+  border-radius: 5px !important;
+  margin-top: 0.5rem !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  border: solid 1px $menu-item-color;
+  width: 100%;
+  &:focus {
+    border: 1px solid blue !important;
+    outline: none;
+    border-radius: 5px;
+  }
+}

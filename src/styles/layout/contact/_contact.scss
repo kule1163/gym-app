@@ -1,0 +1,52 @@
+.contact-container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  .section-container {
+    margin-block: 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @media (max-width: $menu-lg) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .map-container {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+  .footer-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1rem;
+    @media (max-width: $menu-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $menu-sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    justify-content: center;
+    .single-box {
+      display: flex;
+      align-items: center;
+      color: white;
+      .text {
+        font-size: 0.7em;
+        color: $menu-item-color;
+        margin-left: 0.7rem;
+      }
+    }
+  }
+}

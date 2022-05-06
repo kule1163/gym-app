@@ -1,0 +1,52 @@
+$badge-menu-padding-left: 8; 
+
+.ss-container {
+    display: none;
+    @media (max-width: $menu-md) {
+        width: 100%;
+        padding-left: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left-box{
+            display: flex;
+            align-items: center;
+            & img {
+                width: 150px;
+                object-fit: cover;
+                height: 100%;
+
+                @media (max-width: $menu-sm) {
+                    width: 120px;
+                }
+            }
+        }
+    }
+    .right-box {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .box {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .badge-box {
+            padding-right: #{$badge-menu-padding-left}vw;
+            @extend .box;
+        }
+        .menu-box {
+            border-left: 1px solid grey;
+            @extend .box;
+            width: 120px;
+            .icon-box {
+                cursor: pointer;
+                color: white;
+                width: 80px;
+                height: 100%;
+                background-color: $secondIndigo;
+            }
+        }
+    }
+}
+

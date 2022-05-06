@@ -1,0 +1,102 @@
+.reviews-container {
+  padding: 3rem $layout-padding;
+  height: auto;
+  position: relative;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: "center";
+  background-size: cover;
+  grid-template-columns: repeat(4, 1fr);
+
+  .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    top: -100vh;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  & > * {
+    text-align: center;
+  }
+
+  @media (max-width: $menu-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $menu-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .single-container {
+    display: flex;
+    padding-block: 2rem;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba($color: $firstIndigo, $alpha: 0.6);
+
+    .job-text {
+      font-size: 0.6em;
+      letter-spacing: 3px;
+      color: $menu-item-color;
+      margin-top: 1.5rem;
+    }
+
+    .name-text {
+      color: white;
+      font-weight: 700;
+      margin-block: 1.5rem;
+    }
+
+    .content-box {
+      width: 100%;
+      border-left: 3px solid $orange;
+      border-right: 3px solid $orange;
+      padding-inline: 2rem;
+      .content-text {
+        font-size: 0.9em;
+        color: $menu-item-color;
+      }
+    }
+
+    .img-container {
+      box-sizing: border-box;
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      border: 12px solid gray;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .star-box {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    background-color: $orange;
+    color: white;
+    border-radius: 20px;
+
+    .icon {
+      &:not(:last-child) {
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}

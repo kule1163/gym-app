@@ -1,0 +1,13 @@
+.product-container {
+  padding-inline: $layout-padding;
+  width: 100%;
+  .product-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $dual-grid-gap;
+    @media (max-width: $menu-lg) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

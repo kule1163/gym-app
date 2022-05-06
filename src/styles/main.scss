@@ -1,0 +1,63 @@
+//abstracks
+@import "abstracts/veriables";
+@import "abstracts/mixins";
+
+// components
+// general
+/* @import "components/home/homeWorkout"; */
+@import "components/storeProducts/storeProducts";
+@import "components/button/orangeButton";
+@import "components/compForms/compForms";
+@import "components/select/select";
+//navbar
+@import "components/navbar/navbar";
+@import "components/navbar/menu";
+@import "components/navbar/smallScreenMenu";
+@import "components/navbar/topMenu";
+@import "components/header/header";
+@import "components/navbar/badge";
+// gym compnents
+@import "components/pagesComp/gymComps/gallery/searchIcon";
+@import "components/pagesComp/gymComps/schedule/freePassForm";
+@import "components/pagesComp/gymComps/schedule/scheduleComp";
+@import "components/pagesComp/gymComps/pricing/memberShip";
+@import "components/pagesComp/gymComps/post/singlePost";
+//product detail
+@import "components/pagesComp/productDetail/productContainer/productFeatures";
+@import "components/pagesComp/productDetail/productContainer/productImages";
+//cart
+@import "components/cart/cartItem";
+
+//base
+@import "base/reset";
+@import "base/general";
+
+//layout
+//general layouts
+@import "layout/home/home";
+@import "layout/contact/contact";
+@import "layout/footer/footer";
+//gym layouts
+@import "layout/pagesLayout/gymLayouts/about/about";
+@import "layout/pagesLayout/gymLayouts/about/reviews";
+@import "layout/pagesLayout/gymLayouts/gallery/gallery";
+@import "layout/pagesLayout/gymLayouts/gallery/galleryPhotos";
+@import "layout/pagesLayout/gymLayouts/schedule/schedule";
+@import "layout/pagesLayout/gymLayouts/pricing/pricing";
+//store layouts
+@import "layout/pagesLayout/storeLayouts/xtremeProducts";
+//blog layouts
+@import "layout/pagesLayout/blogLayouts/blogPosts";
+// productdetail
+@import "layout/pagesLayout/productDetailLayouts/productContainer";
+//cart
+@import "layout/cart/cart";
+
+//
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+//pages
+//faq pages
+@import "pages/postDetail/postDetail";
+@import "pages/faq/photoLicenses";
+@import "pages/faq/terms";

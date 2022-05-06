@@ -1,0 +1,97 @@
+.store-products-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  & > * {
+    text-align: center;
+  }
+  @media (max-width: $menu-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $menu-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .product-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    .img-container {
+      height: 20vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $menu-item-color;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 100%;
+      transition: ease 0.5 all;
+      padding-block: 2rem;
+      box-sizing: border-box;
+      .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:hover {
+        & img {
+          transform: scale(1.1);
+        }
+      }
+      @media (max-width: $menu-lg) {
+        height: 30vw;
+      }
+      @media (max-width: $menu-sm) {
+        height: 60vw;
+      }
+      & img {
+        height: 18vw;
+        object-fit: cover !important;
+        display: block;
+        width: 100%;
+      }
+    }
+    .categ-text {
+      font-size: 0.7em;
+      letter-spacing: 3px;
+      color: black;
+      margin-block: 1rem;
+    }
+    .info-text {
+      font-weight: 900;
+      color: $firstIndigo;
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .price-box {
+      position: absolute;
+      right: 1rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      & * {
+        border-radius: 20px;
+      }
+      .second-price {
+        background-color: $orange;
+        font-size: 1em;
+        color: white;
+        font-weight: 900;
+        padding: 0.2rem 0.5rem;
+      }
+      .first-price {
+        background-color: $firstIndigo;
+        font-size: 0.8em;
+        color: white;
+        font-weight: 900;
+        padding: 0.1rem 0.3rem;
+        margin-top: 0.4rem;
+        flex-grow: 0;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

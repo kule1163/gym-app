@@ -1,0 +1,44 @@
+.nav-container {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  .nav-box {
+    display: flex;
+    height: $navbar-height;
+    background-color: $firstIndigo;
+    width: 100%;
+    .logoBox {
+      /*  width: auto; */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      align-items: center;
+      height: $navbar-height;
+      /* background-color: $firstIndigo; */
+      & img {
+        object-fit: cover;
+        width: 10vw;
+      }
+      @media (max-width: $menu-lg) {
+        display: none;
+      }
+    }
+  }
+  .top-menu-container {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s ease;
+    @media (max-width: $menu-md) {
+      display: block;
+    }
+  }
+  .show-top-menu {
+    height: 100%;
+  }
+}

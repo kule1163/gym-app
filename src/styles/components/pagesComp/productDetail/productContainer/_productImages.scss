@@ -1,0 +1,28 @@
+.product-images-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  border-radius: $dual-grid-box-radius;
+
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .big-image-container {
+    height: auto;
+    padding-inline: 2rem;
+    box-sizing: border-box;
+  }
+  .small-image-container {
+    display: flex;
+    .small-image-box {
+      border-top: 1px solid $menu-item-color;
+      cursor: pointer;
+      &:not(:last-child) {
+        border-right: 1px solid $menu-item-color;
+      }
+    }
+  }
+}

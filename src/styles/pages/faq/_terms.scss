@@ -1,0 +1,29 @@
+.terms-container {
+  width: 100%;
+  padding-inline: $layout-padding;
+  .terms-box {
+    padding-block: $layout-padding;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+  }
+  .version-box {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    .text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & * {
+        text-align: center !important;
+      }
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

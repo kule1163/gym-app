@@ -1,0 +1,23 @@
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem $layout-padding;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  .section-container {
+    margin-block: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $dual-grid-gap;
+    @media (max-width: $menu-lg) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

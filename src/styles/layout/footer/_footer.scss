@@ -1,0 +1,46 @@
+.footer-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem $layout-padding;
+  background-color: $firstIndigo;
+  width: 100%;
+  @media (max-width: $menu-md) {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .text {
+    font-size: 0.8em;
+    color: $menu-item-color;
+  }
+  .features-container {
+    display: flex;
+    align-items: center;
+    .text-features {
+      @extend .text;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    .icon {
+      @extend .orange-icon;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+    @media (max-width: $menu-md) {
+      margin-block: 2rem;
+    }
+  }
+  .powered-text {
+    @extend .text;
+  }
+}

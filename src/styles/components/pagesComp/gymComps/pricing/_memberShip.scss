@@ -1,0 +1,53 @@
+.member-ship-container {
+  box-sizing: border-box;
+  padding: 2rem;
+  .member-ship-box {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: $secondIndigo;
+    .price-box {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: rgba($color: grey, $alpha: 0.5);
+      font-size: 3em;
+      font-weight: 900;
+    }
+    .type-text {
+      font-size: 0.5em;
+      margin-bottom: 0.3rem;
+      color: $menu-item-color;
+      letter-spacing: 3px;
+    }
+    .membership-text {
+      font-size: 1.2em;
+      font-weight: 900;
+      color: white;
+    }
+    .text-container {
+      margin-block: 1rem;
+      margin-left: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      .text-box {
+        color: $menu-item-color;
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+        .text {
+          color: $menu-item-color;
+          font-size: 0.9em;
+          margin-left: 0.7rem;
+        }
+      }
+    }
+  }
+}

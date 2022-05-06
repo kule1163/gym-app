@@ -1,0 +1,41 @@
+.top-menu-box {
+  width: 100%;
+  .first-section {
+    background-color: $secondIndigo;
+    display: grid;
+    color: $menu-item-color;
+    font-size: 1em;
+    border-top: 1px solid grey;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .single-item {
+      width: 100%;
+      cursor: pointer;
+      padding-block: 1rem;
+      &:hover {
+        background-color: $thirdIndigo;
+        color: white;
+      }
+    }
+  }
+  .second-section {
+    background-color: $thirdIndigo;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: auto;
+    & a {
+      font-size: 0.8em;
+      text-decoration: none;
+      color: $menu-item-color;
+      cursor: pointer;
+      &:hover {
+        color: $orange !important;
+      }
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

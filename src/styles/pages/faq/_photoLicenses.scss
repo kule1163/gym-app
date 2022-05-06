@@ -1,0 +1,58 @@
+.photo-license-container {
+  display: grid;
+  padding-inline: $layout-padding;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  & a {
+    text-decoration: none;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  @media (max-width: $menu-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .single-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28vw;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    &:hover {
+      & img {
+        transform: scale(1.1);
+      }
+    }
+    @media (max-width: $menu-md) {
+      height: 40vw;
+    }
+    & img {
+      object-fit: cover;
+      height: 25vw;
+      width: 100%;
+    }
+    .button-box-b {
+      width: 85%;
+      position: absolute;
+      display: block;
+      bottom: 1rem;
+      left: 50%;
+      @include transfrom(-50%, 0);
+      @media (max-width: $menu-md) {
+        display: none;
+      }
+    }
+    .button-box-s {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 50%;
+      @include transfrom(-50%, 0);
+      display: none;
+      @media (max-width: $menu-md) {
+        display: block;
+      }
+    }
+  }
+}

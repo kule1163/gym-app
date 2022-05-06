@@ -1,15 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { store } from "./app/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+import { BrowserRouter } from "react-router-dom";
+
+// eslint-disable-next-line
+import "swiper/css/bundle";
+import "./styles.css";
+
+let persistor = persistStore(store);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </PersistGate>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
